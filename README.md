@@ -19,3 +19,10 @@ The build parameters are:
 ```bash
 $ pyinstaller --onefile --windowed __main__.py
 ```
+
+## Startup args
+In order to run the update manager, you have to pass the absolute path of the ERA app on your machine:
+
+```bash
+$ ./updater /home/kian/test/era-app-1.10.2.AppImage
+```

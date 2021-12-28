@@ -7,6 +7,14 @@ import psutil
 class Utils:
 
     @staticmethod
+    def get_filepath(filename: str) -> str:
+        return os.path.dirname(filename) + '/'
+
+    @staticmethod
+    def get_filename(filename: str) -> str:
+        return os.path.basename(filename)
+
+    @staticmethod
     def kill_running_era_process():
         process_name = 'era-app'
         for proc in psutil.process_iter():
