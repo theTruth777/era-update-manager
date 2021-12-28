@@ -1,9 +1,17 @@
 import os
 import stat
 import platform
+import psutil
 
 
 class Utils:
+
+    @staticmethod
+    def kill_running_era_process():
+        process_name = 'era-app'
+        for proc in psutil.process_iter():
+            if proc.name() == process_name:
+                proc.kill()
 
     @staticmethod
     def make_exe_executable(path: str, executable_name: str):

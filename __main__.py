@@ -8,6 +8,8 @@ if __name__ == "__main__":
     parser.add_argument('exe_name', type=str, help='The filename of the ERA executable.')
     args = parser.parse_args()
 
+    Utils.kill_running_era_process()
+
     ui = Gui(args.exe_path)
 
     Utils.make_exe_executable(args.exe_path, ui.new_executable_name)
